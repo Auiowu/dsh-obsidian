@@ -14,10 +14,12 @@
   },
   "files": [
     "lib",
+    "docs",
     "cordis.patch.yml",
     "locale/*.json",
     "icon.svg",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "engines": {
     "node": ">=20"

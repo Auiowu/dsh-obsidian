@@ -78,29 +78,12 @@ DeepSeek/
 - `forget` 只把 `status` 改成 `superseded` 并追加归档备注，不删文件，历史可追溯。
 - `daily` 分区固定写 `40-Daily/<今天>.md`，同一天多次保存会追加。
 
-## 依赖
-
-无运行时依赖，只用 Node 内置模块（`node:fs` / `node:path`）。本插件不导出 Cordis `Config`，因此不依赖 `@deepseek-ai/schemastery`，本地 link 安装不会出现模块解析失败。
-
-## 开发与迭代
-
-本插件以本地目录（link）方式安装，改完代码后**重装 bundle 不会刷新 ESM 模块缓存**，必须让 Loader 重新 import：
-
-```powershell
-plugin_manager set_plugin target="include:obsidian-memory" enabled=false
-plugin_manager set_plugin target="include:obsidian-memory" enabled=true
-```
-
-只改 `cordis.patch.yml` 里的 `config` 时 Loader 会热更新，不需要这一步。
-
-改完逻辑先跑一次数据层自测（临时目录，不碰真实 vault）：
-
-```powershell
-node test-local.mjs
-```
-
 ## 已知边界
 
-- 系统提示段里的条目摘要是 `digestRefreshMs` 轮询刷新的，刚写入的新条目最多延迟一个周期出现在摘要里；`obsidian_memory recall` 读的是实时文件，不受影响。
+- 系统提示里的条目摘要是按固定间隔刷新的，刚写入的新条目最多延迟一个周期出现在摘要里；`obsidian_memory recall` 读的是实时文件，不受影响。
 - `forget` 只改 `status`，不删除文件；物理清理请自己判断后手动做。
-- 不做 Obsidian 插件侧联动：纯文件系统读写，Obsidian 打开着也不会锁文件冲突，但同一文件不要同时手改。
+- 纯文件系统读写：Obsidian 开着也不会冲突，但同一文件不要同时手改。
+
+## 开发
+
+开发与维护说明见 [`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md)。
