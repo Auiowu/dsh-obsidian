@@ -1,0 +1,38 @@
+{
+  "name": "dsh-obsidian",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Obsidian 记忆库插件：让 Agent 把长期记忆、项目记忆、全局记忆与学习笔记写进本机 Obsidian vault，并能检索、重建索引。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "obsidian",
+    "memory",
+    "knowledge-base"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

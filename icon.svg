@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Obsidian memory">
+  <rect x="5" y="3" width="54" height="58" rx="11" fill="#1d1a2b"/>
+  <path d="M19 3v58" stroke="#8b5cf6" stroke-width="4"/>
+  <path d="M28 17h23M28 29h23M28 41h14" stroke="#c4b5fd" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="47" cy="47" r="9" fill="#8b5cf6"/>
+  <path d="M47 41.5v11M41.5 47h11" stroke="#1d1a2b" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

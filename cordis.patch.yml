@@ -1,0 +1,12 @@
+# dsh-obsidian：把 Agent 的长期记忆接到本机 Obsidian vault。
+#
+# vaultPath 留空时，插件会从 %APPDATA%\obsidian\obsidian.json 里挑最近打开的 vault。
+# promptSection: 是否在系统提示里加入记忆库使用规则（建议开启）。
+- insert:
+    - id: obsidian-memory
+      name: dsh-obsidian
+      config:
+        vaultPath: ''
+        promptSection: true
+        maxSearchResults: 40
+        maxReadChars: 40000

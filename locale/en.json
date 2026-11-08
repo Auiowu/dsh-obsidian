@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Obsidian memory",
+    "description": "Store durable memory (global, project, long-term) and research notes in a local Obsidian vault: save, recall, full-text search and rebuild indexes, with vault usage rules added to the system prompt."
+  }
+}
